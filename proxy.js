@@ -15,7 +15,7 @@ app.use(express.static(__dirname));
 
 // Route proxy
 app.get('/proxy', async (req, res) => {
-  const matram = req.query.matram || '553100';
+  const matram = req.query.matram || '553600';
   const thoigianbd = req.query.thoigianbd || "'2025-10-01 00:00:00'";
   const thoigiankt = req.query.thoigiankt || "'2025-10-01 23:59:00'";
 
@@ -35,3 +35,4 @@ app.get('/proxy', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
