@@ -19,7 +19,7 @@ app.get('/proxy', async (req, res) => {
   const thoigianbd = req.query.thoigianbd || "'2025-10-01 00:00:00'";
   const thoigiankt = req.query.thoigiankt || "'2025-10-01 23:59:00'";
 
-  const apiUrl = `http://203.209.181.170:2018/API_TTB/json/solieu.php?matram=${matram}&ten_table=mucnuoc_oday&sophut=60&tinhtong=0&thoigianbd=${encodeURIComponent(thoigianbd)}&thoigiankt=${encodeURIComponent(thoigiankt)}`;
+  const apiUrl = `http://203.209.181.170:2018/API_TTB/json/solieu.php?matram=${matram}&ten_table=mucnuoc_oday&sophut=10&tinhtong=0&thoigianbd=${encodeURIComponent(thoigianbd)}&thoigiankt=${encodeURIComponent(thoigiankt)}`;
 
   try {
     const response = await fetch(apiUrl);
@@ -35,4 +35,5 @@ app.get('/proxy', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
 
